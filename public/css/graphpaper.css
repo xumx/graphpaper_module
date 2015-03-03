@@ -1,0 +1,387 @@
+::-webkit-scrollbar {
+    display: none;
+}
+@media print {
+    #canvas-container {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+    }
+}
+html, body, #canvas-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-nav > li > ul {
+    max-height: 1000%;
+    overflow: auto;
+}
+.sidebar-nav a, .navbar a {
+    cursor: pointer;
+}
+.avatar-small {
+    height: 40px !important;
+    width: 40px !important;
+}
+.create-widget-item, .canvas-widget-item {
+    height: 120px;
+    padding-top: 2em;
+    cursor: pointer;
+}
+.create-widget-item {
+    color: #58595B;
+    border: 2px solid #58595B;
+    background: #FFF;
+}
+.create-widget-item:hover {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .05);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .05);
+    background: #58595B;
+    color: white;
+}
+.canvas-widget-item {
+    border: 2px solid #FC9F3A;
+    color: #FC9F3A;
+}
+.canvas-widget-item:hover {
+    text-decoration: none;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .05);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .05);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    background-color: #FC9F3A;
+    color: white;
+}
+.sidebar-themes {
+    opacity: 1;
+}
+.square.minimized {
+    overflow: auto;
+    text-transform: capitalize;
+    background-color: #FC9F3A;
+    color: white;
+    padding-top: 40px;
+    cursor: pointer;
+}
+/* SVG Move Preview */
+
+#movePreview {
+    fill: #0082BF;
+    stroke: #0082BF;
+    stroke-width: 5;
+    fill-opacity: 0.2;
+    stroke-opacity: 0.5
+}
+/*This is such an awesome hack!!*/
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+div[name=delete-team-member] {
+    cursor: not-allowed;
+}
+#page-container.sidebar-light #sidebar .sidebar-nav a.open, #page-container.sidebar-light #sidebar .sidebar-nav li.active > a {
+    background: white !important;
+}
+.btn-outline {
+    color: #0077AB;
+    background-color: transparent;
+    /*border-color: #0077AB*/
+}
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active {
+    color: #fff;
+    /*background-color: #0077AB;*/
+    /*border-color: #0077AB*/
+}
+.btn-outline-inverse {
+    color: #fff;
+    background-color: transparent;
+    border-color: #9ee1ff
+}
+.btn-outline-inverse:hover, .btn-outline-inverse:focus, .btn-outline-inverse:active {
+    color: #0077AB;
+    text-shadow: none;
+    background-color: #fff;
+    border-color: #fff
+}
+#canvas-container {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.nogap {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.overflow {
+    overflow: auto;
+}
+.smallblock {
+    margin: 0;
+    padding: 10px 5px 1px;
+}
+.square iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+paper-toast {
+    z-index: 1030;
+}
+#loginbackground {
+    background-image: url('/img/placeholders/photos/starrynight.jpg');
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#popup core-menu {
+    max-height: 350px;
+    overflow-y: scroll;
+}
+button[name=fullscreen-off], button[name=fullscreen-lock] {
+    display: none;
+    padding: 2px 6px 3px;
+    opacity: 0.5;
+    -webkit-transition: opacity 250ms ease;
+    -moz-transition: opacity 250ms ease;
+    -o-transition: opacity 250ms ease;
+    transition: opacity 250ms ease;
+}
+button[name=fullscreen-off] > i, button[name=fullscreen-lock] > i {
+    width: 14px;
+}
+button[name=fullscreen-off]:hover, button[name=fullscreen-lock]:hover {
+    opacity: 1;
+}
+.table.table-pricing.table-muted th {
+    background-color: #cccccc;
+}
+/* entity */
+/*.entity > .cover-image {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+}
+.entity > .slant-box {
+    width: 0;
+    height: 80px;
+    margin-top: -80px;
+    border-right: 320px solid transparent;
+    border-bottom: 80px solid white;
+}
+.entity > .content {
+    padding: 8px;
+    background: white;
+}
+.entity > .content > .title {
+    width: 50%;
+    margin-top: -48px;
+    margin-bottom: 4px;
+    color: #2ecc71;
+}
+.entity > .content > .name {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 2em;
+}*/
+
+paper-fab {
+    z-index: 2;
+    position: absolute;
+    color: white;
+    background: #259b24;
+}
+paper-fab[name=resize] {
+    cursor: nwse-resize;
+}
+.square {
+    display: block;
+    position: absolute !important;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+.square > .cover {
+    opacity: 0;
+    -webkit-transition-property: background-color;
+    -moz-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    position: relative;
+    z-index: 2;
+}
+.square > .cover:hover {
+    background-color: #0082BF;
+    opacity: 0.5;
+}
+/*.square.highlight {
+    background-color: #ffee58;
+}
+*/
+/*There should only be one tile*/
+
+#tile {
+    position: absolute !important;
+    height: 100px;
+    width: 100px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    opacity: 0.4
+}
+#tile:hover {
+    background-color: #0082BF;
+}
+#tile.selected {
+    border: 10px solid transparent;
+    outline: #0082BF 4px dashed;
+}
+.square.selected {
+    /*outline doesn't look good on wedding*/
+    /*outline: #0082BF 4px dashed;*/
+}
+#tile.selected:hover {
+    background-color: transparent;
+}
+/*.square img {
+    max-width: 100%;
+    max-height: 100%;
+}*/
+
+#minimap {
+    z-index: 8001;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 150px;
+    width: 150px;
+    background: white;
+    border: 2px solid grey;
+    opacity: 0.7;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+#minimap:hover {
+    opacity: 1;
+}
+#popup {
+    display: none;
+    z-index: 9002;
+    position: fixed !important;
+    top: 35%;
+    left: 50%;
+    width: 600px;
+    margin-top: -50px;
+    margin-left: -300px;
+    border-radius: 5px;
+    background: #ecf0f1;
+}
+#popup .backdrop {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+#popup paper-item {
+    background: white;
+}
+#popup paper-item:hover {
+    background: #ecf0f1;
+}
+#popup paper-item.core-selected {
+    background: #ecf0f1;
+}
+#popup #command {
+    width: 100%;
+    height: 80px;
+    border: 0;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 300;
+    outline: none;
+}
+#popup #command:focus {
+    outline: none;
+}
+/*custom fab icon style*/
+
+paper-fab[mini] {
+    width: 32px;
+    height: 32px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+paper-fab[mini] /deep/ #icon {
+    width: 16px;
+    height: 16px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+paper-fab[mini]:hover {
+    width: 40px;
+    height: 40px;
+    margin-top: -4px;
+    margin-left: -4px;
+}
+paper-fab[mini]:hover /deep/ #icon {
+    width: 24px;
+    height: 24px;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#togetherjs-dock-anchor {
+    display: none !important;
+}

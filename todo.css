@@ -1,0 +1,39 @@
+.todo-module .done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.todo-module {
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+}
+.todo-module p {
+    margin-bottom: 0;
+    position: relative;
+}
+.todo-module .delete {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: -31px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 26px;
+    opacity: 0;
+    -webkit-transition: all 0.1 s ease-in-out;
+    -webkit-transform-origin: 50 % 50 %;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.todo-module p:hover .delete {
+    opacity: 1;
+}
+.todo-module .delete:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+}

@@ -1,0 +1,33 @@
+<template name="todo">
+   <div class="todo-module nogap">
+        {{#if data.things}}
+
+            <div class="text-center">{{count}} things to do.</div>
+
+            {{#each data.things}}
+            <p>
+                <input type="checkbox" class="do">
+                <span class="{{#if done}}done{{/if}}">
+                    &nbsp;{{title}}
+                </span>
+                <span class="delete text-center">✕</span>
+            </p>
+            {{/each}}
+
+        {{else}}
+
+        <div class="text-center">Nothing to do!</div>
+
+        {{/if}}
+
+        <div style="position:absolute;bottom:4px;">
+            <input type="text" placeholder="New Todo" style="margin: 0 auto;
+            display: block;
+            background: 0;
+            border: 0;
+            border-bottom: 3px solid #fff;
+            color: #fff;
+            outline: none;">
+        </div>
+    </div>
+</template>

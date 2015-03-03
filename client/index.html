@@ -1,0 +1,22 @@
+<head>
+    <meta charset="utf-8">
+
+    <!-- Stylesheets -->
+    <!-- Related styles of various icon packs and plugins -->
+    <link rel="stylesheet" href="/css/plugins.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/themes.css">
+
+    <!-- GraphPaper Stylesheet -->
+    <link rel="stylesheet" href="/css/graphpaper.css">
+
+    <script src="/js/plugins.js"></script>
+</head>
+
+<body>
+    {{#with square}}
+      <div id="{{_id}}" class="container" style="height:{{heightpx}}px; width:{{widthpx}}px;margin:50px auto;position:relative; border: 1px solid black;">
+          {{> todo}}
+      </div>
+    {{/with}}
+</body>
