@@ -1,0 +1,15 @@
+<body>
+    {{#with square}}
+      <div id="{{_id}}" style="height:{{heightpx}}px; width:{{widthpx}}px;margin:50px auto;position:relative; border: 1px solid black;">
+
+
+          <!-- Change this to the template name -->
+          {{> tradingview}}
+
+
+      </div>
+    {{/with}}
+
+
+    <div style="position:fixed; left: 20px; top: 80px;" class="reset btn btn-info" onclick="reset();">Reset</div>
+</body>

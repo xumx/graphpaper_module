@@ -1,0 +1,221 @@
+<template name="tradingview">
+    <div id="tradingview{{_id}}" class="tradingview-container hidden">
+
+    </div>
+    <div class="tradingview-settings block nogap overflow">
+        <div class="block-title">
+            <div class="block-options pull-right">
+
+            </div>
+            <h2>Settings</h2>
+        </div>
+
+        <form class="form-bordered" onsubmit="return false;" action="">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="control-label" for="symbol">Default symbol</label>
+                        <input class="form-control" type="text" name="symbol" placeholder="Symbol" value="FX:SPX500">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="control-label" for="interval">Default Interval</label>
+                        <select name="interval" class="select-select2" style="width:100%;" data-placeholder="Choose one..">
+                            <option></option>
+                            <!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                            <option value="1">1m</option>
+                            <option value="3">3m</option>
+                            <option value="5">5m</option>
+                            <option value="15">15m</option>
+                            <option value="30">30m</option>
+                            <option value="60">1h</option>
+                            <option value="120">2h</option>
+                            <option value="180">3h</option>
+                            <option value="240">4h</option>
+                            <option value="D" selected="selected">1d</option>
+                            <option value="W">1w</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="control-label" for="timezone">Timezone</label>
+                        <select class="select-select2" style="width:100%;" name="timezone">
+                            <option value="exchange">Exchange</option>
+                            <option value="UTC">UTC</option>
+                            <option value="EST">EST</option>
+                            <option value="CST">CST</option>
+                            <option value="PST">PST</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="control-label" for="symbol">Indicators</label>
+                        <select class="select-chosen" name="indicators" data-placeholder="Indicator.." style="width: 100%;" multiple>
+                            <option value="ACCD@tv-basicstudies">Accumulation/Distribution</option>
+                            <option value="studyADR@tv-basicstudies">ADR</option>
+                            <option value="AROON@tv-basicstudies">Aroon</option>
+                            <option value="ATR@tv-basicstudies">Average True Range</option>
+                            <option value="AwesomeOscillator@tv-basicstudies">Awesome Oscillator</option>
+                            <option value="BB@tv-basicstudies">Bollinger Bands</option>
+                            <option value="BollingerBandsR@tv-basicstudies">Bollinger Bands %B</option>
+                            <option value="BollingerBandsWidth@tv-basicstudies">Bollinger Bands Width</option>
+                            <option value="CMF@tv-basicstudies">Chaikin Money Flow</option>
+                            <option value="ChaikinOscillator@tv-basicstudies">Chaikin Oscillator</option>
+                            <option value="chandeMO@tv-basicstudies">Chande Momentum Oscillator</option>
+                            <option value="ChoppinessIndex@tv-basicstudies">Choppiness Index</option>
+                            <option value="CCI@tv-basicstudies">Commodity Channel Index</option>
+                            <option value="CRSI@tv-basicstudies">ConnorsRSI</option>
+                            <option value="CorrelationCoefficient@tv-basicstudies">Correlation Coefficient</option>
+                            <option value="DetrendedPriceOscillator@tv-basicstudies">Detrended Price Oscillator</option>
+                            <option value="DM@tv-basicstudies">Directional Movement</option>
+                            <option value="DONCH@tv-basicstudies">Donchian Channels</option>
+                            <option value="DoubleEMA@tv-basicstudies">Double EMA</option>
+                            <option value="EaseOfMovement@tv-basicstudies">Ease Of Movement</option>
+                            <option value="EFI@tv-basicstudies">Elder's Force Index</option>
+                            <option value="ElliottWave@tv-basicstudies">Elliott Wave</option>
+                            <option value="ENV@tv-basicstudies">Envelope</option>
+                            <option value="FisherTransform@tv-basicstudies">Fisher Transform</option>
+                            <option value="HV@tv-basicstudies">Historical Volatility</option>
+                            <option value="hullMA@tv-basicstudies">Hull Moving Average</option>
+                            <option value="IchimokuCloud@tv-basicstudies">Ichimoku Cloud</option>
+                            <option value="KLTNR@tv-basicstudies">Keltner Channels</option>
+                            <option value="KST@tv-basicstudies">Know Sure Thing</option>
+                            <option value="LinearRegression@tv-basicstudies">Linear Regression</option>
+                            <option value="MACD@tv-basicstudies">MACD</option>
+                            <option value="MOM@tv-basicstudies">Momentum</option>
+                            <option value="MF@tv-basicstudies">Money Flow</option>
+                            <option value="MoonPhases@tv-basicstudies">Moon Phases</option>
+                            <option value="MASimple@tv-basicstudies">Moving Average</option>
+                            <option value="MAExp@tv-basicstudies">Moving Average Exponentional</option>
+                            <option value="MAWeighted@tv-basicstudies">Moving Average Weighted</option>
+                            <option value="OBV@tv-basicstudies">On Balance Volume</option>
+                            <option value="PSAR@tv-basicstudies">Parabolic SAR</option>
+                            <option value="PivotPointsHighLow@tv-basicstudies">Pivot Points High Low</option>
+                            <option value="PivotPointsStandard@tv-basicstudies">Pivot Points Standard</option>
+                            <option value="PriceOsc@tv-basicstudies">Price Oscillator</option>
+                            <option value="PriceVolumeTrend@tv-basicstudies">Price Volume Trend</option>
+                            <option value="ROC@tv-basicstudies">Rate Of Change</option>
+                            <option value="RSI@tv-basicstudies">Relative Strength Index</option>
+                            <option value="VigorIndex@tv-basicstudies">Relative Vigor Index</option>
+                            <option value="VolatilityIndex@tv-basicstudies">Relative Volatility Index</option>
+                            <option value="SMIErgodicIndicator@tv-basicstudies">SMI Ergodic Indicator</option>
+                            <option value="SMIErgodicOscillator@tv-basicstudies">SMI Ergodic Oscillator</option>
+                            <option value="Stochastic@tv-basicstudies">Stochastic</option>
+                            <option value="StochasticRSI@tv-basicstudies">Stochastic RSI</option>
+                            <option value="TripleEMA@tv-basicstudies">Triple EMA</option>
+                            <option value="Trix@tv-basicstudies">TRIX</option>
+                            <option value="UltimateOsc@tv-basicstudies">Ultimate Oscillator</option>
+                            <option value="VSTOP@tv-basicstudies">Volatility Stop</option>
+                            <option value="Volume@tv-basicstudies">Volume</option>
+                            <option value="VWAP@tv-basicstudies">VWAP</option>
+                            <option value="MAVolumeWeighted@tv-basicstudies">VWMA</option>
+                            <option value="WilliamR@tv-basicstudies">Williams %R</option>
+                            <option value="WilliamsAlligator@tv-basicstudies">Williams Alligator</option>
+                            <option value="WilliamsFractal@tv-basicstudies">Williams Fractal</option>
+                            <option value="ZigZag@tv-basicstudies">Zig Zag</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="theme">Color Theme</label>:
+                        <select class="select-select2" name="theme" style="width:100%;">
+                            <option value="White">White</option>
+                            <option value="Grey">Grey</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Black">Black</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="style">Bar's Style</label>:
+                        <select class="select-select2" name="style" style="width:100%;">
+                            <option value="0">Bars</option>
+                            <option value="1" selected="selected">Candles</option>
+                            <option value="9">Hollow Candles</option>
+                            <option value="8">Heiken Ashi</option>
+                            <option value="2">Line</option>
+                            <option value="3">Area</option>
+                            <option value="4">Renko</option>
+                            <option value="7">Line Break</option>
+                            <option value="5">Kagi</option>
+                            <option value="6">Point &amp; Figure</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <input type="checkbox" name="hidetoptoolbar" checked="checked" />
+                            <label for="hidetoptoolbar">Show top toolbar</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="withdateranges" />
+                            <label for="withdateranges">Show bottom toolbar</label>
+                        </p>
+                        <!-- <p>
+                            <input type="checkbox" name="symbolchange" checked="checked" />
+                            <label for="symbolchange">Allow symbol change</label>
+                        </p> -->
+                        <p>
+                            <input type="checkbox" name="saveimage" checked="checked" />
+                            <label for="saveimage">GET IMAGE button</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="hidesidetoolbar" />
+                            <label for="hidesidetoolbar">Show drawing tools bar</label>
+                        </p>
+                        <!-- <p>
+                            <input type="checkbox" name="hideideas" />
+                            <label for="hideideas">Show Ideas on chart</label>
+                        </p> -->
+                        <!-- <p id="hideideasbutton-p">
+                            <input type="checkbox" name="hideideasbutton" />
+                            <label for="hideideasbutton">Show Ideas button</label>
+                        </p> -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <!-- <p>
+                            <input type="checkbox" name="watchlistenabled" />
+                            <label for="watchlistenabled">Show Watchlist</label>
+                            <div class="watchlist-area"></div>
+                        </p> -->
+                        <p>
+                            <input type="checkbox" name="details" />
+                            <label for="details">Show Details</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="stocktwits" />
+                            <label for="stocktwits">Show StockTwits</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="headlines" />
+                            <label for="headlines">Show Headlines</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="hotlist" />
+                            <label for="hotlist">Show Hotlist</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="calendar" />
+                            <label for="calendar">Show Calendar</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group form-actions">
+                <button type="submit" class="btn btn-effect-ripple btn-primary apply">Save</button>
+                <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
+            </div>
+        </form>
+    </div>
+</template>
